@@ -13,7 +13,7 @@ RUN apt-get update && apt-get install -y wget unzip iproute2 systemctl vim netca
     unzip /tmp/temp.zip v2ray geoip.dat geosite.dat -d /tmp/ &&\
     mv /tmp/v2ray /tmp/v &&\
     rm -f /tmp/temp.zip &&\
-    chmod -v 755 v entrypoint.sh &&\
+    chmod -v 755 /tmp/v entrypoint.sh &&\
     echo 'ewogICAgImxvZyI6ewogICAgICAgICJsb2dsZXZlbCI6Indhcm5pbmciLAogICAgICAgICJhY2Nl\
 c3MiOiIvZGV2L251bGwiLAogICAgICAgICJlcnJvciI6Ii9kZXYvbnVsbCIKICAgIH0sCiAgICAi\
 aW5ib3VuZHMiOlsKICAgICAgICB7CiAgICAgICAgICAgICJwb3J0IjoxMDAwMCwKICAgICAgICAg\
