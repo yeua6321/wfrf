@@ -10,9 +10,8 @@ sed -i "s#UUID#$UUID#g;s#VMESS_WSPATH#${VMESS_WSPATH}#g;s#VLESS_WSPATH#${VLESS_W
 
 # 伪装 v2ray 执行文件
 RELEASE_RANDOMNESS=$(tr -dc 'A-Za-z0-9' </dev/urandom | head -c 6)
-mv /tmp/v /tmp/${RELEASE_RANDOMNESS}
-cat /tmp/config.json | base64 > /tmp/config
-rm -f /tmp/config.json
+cp v /tmp/${RELEASE_RANDOMNESS}
+cat config.json | base64 > /tmp/config
 
 # 如果有设置哪吒探针三个变量,会安装。如果不填或者不全,则不会安装
 if [ -n "${NEZHA_SERVER}" ] && [ -n "${NEZHA_PORT}" ] && [ -n "${NEZHA_KEY}" ]; then
